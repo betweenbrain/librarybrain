@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5"
+         type="plugin"
+         group="system"
+         method="upgrade">
+	<name>System - betweenbrain Library</name>
+	<author>Matt Thomas</author>
+	<creationDate>January 8th, 2014</creationDate>
+	<copyright>(C) 2014 Matt Thomas. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>matt@betweenbrain.com</authorEmail>
+	<authorUrl>www.betweenbrain.com</authorUrl>
+	<version>1.0</version>
+	<description>This plugin will override classes contained in the included config file.</description>
+
+	<files>
+		<filename plugin="librarybrain">librarybrain.php</filename>
+		<folder>librarybrain</folder>
+	</files>
+
+</install>
