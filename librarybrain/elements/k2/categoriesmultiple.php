@@ -1,4 +1,5 @@
 <?php defined('_JEXEC') or die;
+
 /**
  * @version        $Id: categoriesmultiple.php 1812 2013-01-14 18:45:06Z lefteris.kavadas $
  * @package        K2
@@ -14,7 +15,6 @@ class JElementCategoriesMultiple extends JElement
 
 	function fetchElement($name, $value, &$node, $control_name)
 	{
-
 		$db    = JFactory::getDBO();
 		$query = 'SELECT m.* FROM #__k2_categories m WHERE trash = 0 ORDER BY parent, ordering';
 		$db->setQuery($query);
@@ -24,7 +24,7 @@ class JElementCategoriesMultiple extends JElement
 		{
 			foreach ($mitems as $v)
 			{
-				if (JVERSION != '15')
+				if (version_compare(JVERSION, '1.6.0', 'ge'))
 				{
 					$v->title     = $v->name;
 					$v->parent_id = $v->parent;
@@ -44,7 +44,7 @@ class JElementCategoriesMultiple extends JElement
 			$mitems[]       = JHTML::_('select.option', $item->id, '   ' . $item->treename);
 		}
 
-		if (JVERSION != '15')
+		if (version_compare(JVERSION, '1.6.0', 'ge'))
 		{
 			$fieldName = $name . '[]';
 		}
@@ -57,7 +57,6 @@ class JElementCategoriesMultiple extends JElement
 
 		return $output;
 	}
-
 }
 
 class JFormFieldCategoriesMultiple extends JElementCategoriesMultiple
