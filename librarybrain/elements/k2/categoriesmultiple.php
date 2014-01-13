@@ -24,7 +24,7 @@ class JElementCategoriesMultiple extends JElement
 		{
 			foreach ($mitems as $v)
 			{
-				if (K2_JVERSION != '15')
+				if (JVERSION != '15')
 				{
 					$v->title     = $v->name;
 					$v->parent_id = $v->parent;
@@ -64,5 +64,3 @@ class JFormFieldCategoriesMultiple extends JElementCategoriesMultiple
 {
 	var $type = 'categoriesmultiple';
 }
-
-

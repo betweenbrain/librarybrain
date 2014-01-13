@@ -11,7 +11,7 @@
 	<authorEmail>matt@betweenbrain.com</authorEmail>
 	<authorUrl>www.betweenbrain.com</authorUrl>
 	<version>1.0</version>
-	<description>This plugin will override classes contained in the included config file.</description>
+	<description></description>
 
 	<files>
 		<filename plugin="librarybrain">librarybrain.php</filename>
